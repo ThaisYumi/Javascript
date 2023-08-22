@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 20px;
+}
+
+section {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    height: 360px;
+    width: 450px;
+}
+
+#texto, #texto2 {
+    font-size: 1.5em;
+    margin: 15px;
+}
+
+#foto > img {
+    height: 240px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+footer {
+    font-style: italic;
+    margin: 20px;
+}
