@@ -1,9 +1,11 @@
 var num = document.getElementById(`num`)
 var display = document.getElementById(`display`)
 var vetor = []
+let res = document.getElementById(`res`)
 
 function adicionar() {
     let n = Number(num.value)
+    res.innerText = ``
 
     if (num.value.length == 0) {
         window.alert(`[ERRO]: Adicione um numero!`)
@@ -28,7 +30,8 @@ function adicionar() {
 }
 
 function finalizar() {
-    let res = document.getElementById(`res`)
+    
+    res.innerText = ``
     vetor.sort()
     let s = 0
 
@@ -36,11 +39,11 @@ function finalizar() {
         s += Number(vetor[c])
     }
 
-    let m = s / 2
+    let m = s / vetor.length
 
     res.innerHTML += `Ao todo temos ${vetor.length} numeros cadastrados. <br>`
     res.innerHTML += `O maior valor informado foi ${vetor[vetor.length-1]}. <br>`
     res.innerHTML += `O menor valor informado foi ${vetor[0]}. <br>`
-    res.innerHTML += `Somando todos os valores, temos ${s} <br>`
-    res.innerHTML += `A media dos valores digitados e ${m}`
+    res.innerHTML += `Somando todos os valores, temos ${s}. <br>`
+    res.innerHTML += `A media dos valores digitados e ${m}.`
 }
