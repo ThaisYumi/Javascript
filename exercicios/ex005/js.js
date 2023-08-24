@@ -32,6 +32,11 @@ function adicionar() {
 function finalizar() {
     
     res.innerText = ``
+    
+    if (vetor.length == 0) {
+        window.alert(`[ERRO]: Adicione um numero!`)
+
+    } else {
     vetor.sort()
     let s = 0
 
@@ -46,4 +51,5 @@ function finalizar() {
     res.innerHTML += `O menor valor informado foi ${vetor[0]}. <br>`
     res.innerHTML += `Somando todos os valores, temos ${s}. <br>`
     res.innerHTML += `A media dos valores digitados e ${m}.`
+}
 }
